@@ -30,7 +30,7 @@
 
 -   And more!
 
-#### 🔗 Find the app here: <https://a9jbam-jen-pokorny.shinyapps.io/NameExplorer/>
+#### 🔗 Find the app here: <https://jen-pokorny.shinyapps.io/NameExplorer/>
 
 ------------------------------------------------------------------------
 
