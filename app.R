@@ -13,15 +13,16 @@ dir(path = "modules", full.names = TRUE) |> map(~ source(.))
 
 # Define UI 
 ui <- page_navbar(
-    tags$head(includeHTML("google-analytics.html")),
     
-    title = "NameExplorer",
+    tags$head(includeHTML("google-analytics.html")),
     
     theme = bs_theme(
         version = 5,
         bootswatch = "yeti"
         ), 
 
+    title = "NameExplorer",
+    
     nav_panel("Home", home_ui("home")),
     nav_panel("Explore", explore_ui("explore")),
     nav_panel("Plot", plot_name_trend_ui("plot_trend")),
