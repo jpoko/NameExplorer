@@ -13,16 +13,15 @@ dir(path = "modules", full.names = TRUE) |> map(~ source(.))
 
 # Define UI 
 ui <- page_navbar(
+    #tags$head(includeHTML("google-analytics.html")),
     
-    tags$head(includeHTML("google-analytics.html")),
+    title = "NameExplorer",
     
     theme = bs_theme(
         version = 5,
         bootswatch = "yeti"
         ), 
 
-    title = "NameExplorer",
-    
     nav_panel("Home", home_ui("home")),
     nav_panel("Explore", explore_ui("explore")),
     nav_panel("Plot", plot_name_trend_ui("plot_trend")),
@@ -45,4 +44,3 @@ server <- function(input, output, session) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-#run_with_themer(shinyApp(ui, function(input, output) {}))

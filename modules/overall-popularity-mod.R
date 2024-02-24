@@ -16,7 +16,9 @@ overall_popularity_ui <- function(id) {
                                                
               Find names by popularity, which is the overall proportion of that 
               name appearing (for either sex) over time. Explore names within
-              a given popularity percentile.  
+              a given popularity percentile.   
+              
+              Output:  
  
               **Table:** List of names in alphabetical order
                with the number of babies given that name.  

@@ -14,6 +14,8 @@ length_ui <- function(id){
                     shiny::markdown("
               Find names that have a certain number of letters in the name.  
               
+              Output:  
+              
               **Table:** List of names in alphabetical order
               with the number of babies given that name, and the
               percentile (i.e., popularity) of the name.    

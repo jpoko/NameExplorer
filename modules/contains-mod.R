@@ -13,6 +13,8 @@ contains_ui <- function(id){
                     title = "Info",
                     shiny::markdown("
               Find names that contain a certain letter or set of letters.  
+              
+              Output:  
 
               **Table:** List of names in alphabetical order
               with the number of babies given that name, and the
@@ -90,7 +92,8 @@ contains_ui <- function(id){
                     ),
                     
                     layout_column_wrap(
-                        width = 1/2,
+                        #width = 1/2,
+                        width = "300px",
                         fillable = TRUE,
                         fill = TRUE,
                         tableOutput(ns("contains_table")),

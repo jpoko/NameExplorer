@@ -106,7 +106,7 @@ plot_name_trend_server <- function(id) {
             bs_icon("info-circle"),
             title = "Trend info",
             p("Enter a name of interest and
-             click the botton to view a plot showing the number
+             click the button to view a plot showing the number
              of males and females with that name over time.")
         )
         

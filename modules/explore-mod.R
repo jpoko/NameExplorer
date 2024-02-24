@@ -11,28 +11,8 @@ explore_ui <- function(id) {
             open = FALSE,
             accordion_panel(
                 "About",
-                p("Explore names various ways: overall popularity, popularity by year,
-                  names that start with a certain letter or letters, names that contain 
-                  certain letter(s), and names by length."),
-                p(strong("Popularity")),
-                p("Popularity is the overall proportion of that name
-                  appearing (for either sex) over time. Explore more or less
-                  popular names by getting a random sampling of names within
-                  a given popularity percentile."),
-                p("Higher percentile = More popular"),
-                p("Lower percentile = Less popular"),
-                p("You can also explore popularity by year - select the year of
-                  interest, then the percentile to explore."),
-                p(strong("Starts with")),
-                p("Find names that start with a certain letter or string of
-                  letters by entering the desired starting letter(s)."),
-                p(strong("Contains")),
-                p("Find names that contain a certain string/pattern of letters
-                  somewhere in the name by entering the desired string."),
-                p(strong("Length")),
-                p("Find names that have a certain length (number of characters) by
-                  entering the desired length.")
-
+                
+                uiOutput(ns("about_description"))
             )
         ),
         
@@ -65,11 +45,13 @@ explore_ui <- function(id) {
                 starts_with_ui(NS(id, "start"))
             ),
             
+            ## Contains ----
             nav_panel(
                 title = "Contains",
                 contains_ui(NS(id, "contains"))
             ),
             
+            ## Length ----
             nav_panel(
                 title = "Length",
                 length_ui(NS(id, "length"))
@@ -87,6 +69,12 @@ explore_server <- function(id) {
         
         ns <- session$ns
 
+        
+        output$about_description <- renderUI({
+            includeMarkdown("./txt/about_description.md")
+        })
+        
+        
         starts_with_server("start")
         length_server("length")
         contains_server("contains")

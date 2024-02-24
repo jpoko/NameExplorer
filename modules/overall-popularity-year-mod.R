@@ -17,6 +17,8 @@ popularity_year_ui <- function(id) {
               overall proportion of that 
               name appearing (for either sex) over time. Explore names within
               a given popularity percentile for different years.  
+              
+              Output:  
 
               **Table:** The table has the list of names in alphabetical order
                along with the number of babies that were given that name in
@@ -218,9 +220,6 @@ popularity_year_server <- function(id) {
             
             # Save random sample data
             interest_values$all_selected_data_year <- return_dat
-            
-            #return_dat <- return_dat |>
-            #    select(name, percent_female, percent_male)
             
             # make data long for plotting
             dat_long <- return_dat |>

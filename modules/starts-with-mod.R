@@ -14,6 +14,8 @@ starts_with_ui <- function(id){
                     shiny::markdown("
                                     
               Find names that start with a certain letter or letters.  
+              
+              Output:  
              
               **Table:** List of names in alphabetical order
               with the number of babies given that name, and the
