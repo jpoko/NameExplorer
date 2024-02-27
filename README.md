@@ -36,4 +36,4 @@
 
 #### ℹ️ Additional info:
 
-Data is from {babynames} R package: N Wickham H (2021). babynames: US Baby Names 1880-2017. R package version 1.0.1, <https://CRAN.R-project.org/package=babynames>.
+Data is from {babynames} R package: Wickham H (2021). babynames: US Baby Names 1880-2017. R package version 1.0.1, <https://CRAN.R-project.org/package=babynames>.
